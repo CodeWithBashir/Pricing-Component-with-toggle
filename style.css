@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  /* line-height: 1.5; */
+  background-color: hsl(240, 78%, 98%);
+  color: hsl(233, 13%, 49%);
+
+  /* background-image: url("./images/bg-bottom.svg"), url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+  background-size: 25%; */
+
+  position: relative;
+}
+
+.bg-bottom {
+  position: absolute;
+  /* bottom: 10%; */
+  top: 62%;
+  left: 0;
+  width: 28%;
+  z-index: -1;
+}
+
+.bg-top {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  width: 25%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 5rem auto;
+  padding: 0 4rem;
+}
+
+.pricing-component {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 4rem 0;
+  gap: 3rem;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: hsl(233, 13%, 49%);
+}
+
+.price-switches {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  align-items: center;
+  gap: 2rem;
+
+  color: hsl(234, 14%, 74%);
+  font-size: 1.6rem;
+  max-width: 100%;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 7%;
+  height: 4.2rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 50rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.clicked {
+  /* justify-content: flex-end; */
+  background-color: hsl(240, 78%, 98%);
+  width: 40%;
+  border-radius: 50%;
+  height: 3.3rem;
+  position: absolute;
+  right: 5%;
+}
+
+/* Pricing Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  padding: 2rem 0;
+
+  gap: 2rem;
+  border-radius: 1rem;
+  height: 50rem;
+}
+
+.price {
+  color: hsl(232, 13%, 33%);
+}
+
+.hidden {
+  display: none;
+}
+
+.plan-name {
+  font-size: 2rem;
+}
+
+.price {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.basic {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.master {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.prof {
+  color: hsl(240, 78%, 98%);
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+
+  height: 55rem;
+  color: hsl(240, 78%, 98%);
+  border-radius: 1rem;
+}
+
+.prof .price {
+  color: hsl(240, 78%, 98%);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.features p {
+  color: hsl(233, 13%, 49%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+
+  border-bottom: 0.05rem solid hsl(233, 13%, 49%);
+  /* border: 1px solid red; */
+
+  width: 200%;
+  text-align: center;
+}
+
+.first {
+  border-top: 0.05rem solid hsl(233, 13%, 49%);
+  padding-top: 2rem;
+}
+
+.prof .features p {
+  color: hsl(0, 0%, 98%);
+  border-bottom: 0.05rem solid hsl(240, 78%, 98%);
+}
+.prof-first {
+  border-top: 0.05rem solid hsl(240, 78%, 98%) !important;
+  padding-top: 2rem !important;
+}
+.learn-more {
+  width: 80%;
+  padding: 1.4rem 6rem;
+  border: none;
+  background: none;
+
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: hsl(240, 78%, 98%);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.learn-more:hover {
+  box-shadow: inset 0 0 0 0.2rem hsl(0, 0%, 98%);
+  background-color: hsl(240, 78%, 98%);
+}
+
+.basic .learn-more:hover {
+  box-shadow: inset 0 0 0 0.2rem hsl(237, 63%, 64%);
+  background-image: linear-gradient(
+    to right,
+    hsl(240, 78%, 98%),
+    hsl(240, 78%, 98%)
+  );
+  color: hsl(237, 63%, 64%);
+}
+
+.master .learn-more:hover {
+  box-shadow: inset 0 0 0 0.2rem hsl(237, 63%, 64%);
+  background-image: linear-gradient(
+    to right,
+    hsl(240, 78%, 98%),
+    hsl(240, 78%, 98%)
+  );
+
+  color: hsl(237, 63%, 64%);
+}
+
+.prof-btn {
+  color: hsl(237, 63%, 64%);
+  background-image: linear-gradient(
+    to right,
+    hsl(240, 78%, 98%),
+    hsl(240, 78%, 98%)
+  );
+  transition: all 0.2s ease-in-out;
+}
+
+.prof-btn:hover {
+  color: hsl(240, 78%, 98%);
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+@media (max-width: 59rem) {
+  .features p {
+    width: 150%;
+  }
+}
+
+@media (max-width: 47rem) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .card {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06);
+  }
+
+  .features p {
+    width: 150%;
+  }
+
+  .toggle {
+    width: 20%;
+    height: 5rem;
+    position: relative;
+  }
+
+  .clicked {
+    position: absolute;
+    width: 35%;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .pricing-component {
+    padding: 0;
+    max-width: 100%;
+  }
+  .toggle {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+  }
+
+  .clicked {
+    position: absolute;
+    width: 45%;
+    height: 4rem;
+  }
+}
